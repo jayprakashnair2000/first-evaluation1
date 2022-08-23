@@ -1,0 +1,69 @@
+body{
+    background: url(img/back.jpg) ;
+}
+
+/* .cont{
+    background-color: aliceblue;
+    opacity: 0.8;
+    /* margin: 1% 30% 20% 30%; */
+
+    /* margin: 30px 500px 300px 500px;
+   
+    padding: 4%; */
+    /* border-radius: 30px; */
+    /* display: flex;
+    display: inline-block; */
+    /* align-items: center; */
+/* } */ 
+
+
+
+h2{
+    text-align: center;
+    padding-top: 10%;
+}
+
+.b{
+    padding-right: 10px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+
+.details{
+    display: flex;
+    background-color: aliceblue;
+
+
+    background-color: aliceblue;
+    opacity: 0.8;
+    /* margin: 1% 30% 20% 30%; */
+
+    margin: 30px 500px 300px 500px;
+   
+    padding: 4%;
+    /* border-radius: 30px; */
+    /* display: flex;
+    display: inline-block; */
+    align-items: center;
+}
+
+
+.heading{
+    text-align: center;
+    font-family: "Poppins";
+    color: blueviolet;
+}
+
+.airlines
+{
+    background-color: lightgrey;
+  
+}
+.airlines h1{
+    color: rgb(212, 39, 9);
+    font-family: "Montserrat";
+}
+

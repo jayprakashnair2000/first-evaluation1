@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form Validation</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.PNG">
+</head>
+<body>
+  <div class="container">
+    
+    
+    
+    
+    <form action="confirm.html">
+      <div class="fas fa-paper-plane" >
+        <img src="img/icon.PNG" style="text-align:center" onclick="location.href='index.html'">
+      </div>
+
+      <div class="input-group">
+        <label>First Name:</label>
+        <input type="text" placeholder="Enter your First name" id="fname" onkeyup="validtefName()">
+         <span id="fname-error"><!--First Name is Required --></span>
+      </div>
+
+      <div class="input-group">
+        <label>Last Name:</label>
+        <input type="text" placeholder="Enter your Last name" id="lname" onkeyup="validtelName()">
+         <span id="lname-error">  <!--Last Name is Required-->  </span> 
+      </div>
+
+      <div class="input-group">
+        <label>Email Id:</label>
+        <input type="email" placeholder="Enter Email" id="email" onkeyup="validteemail()">
+        <span id="email-error"><!--Email is Required--></span>
+      </div>   
+
+      <div class="input-group">
+        <label>Age:</label>    
+        <input type="text" id="age" name="age" placeholder="Age" onkeyup="return validteage()">
+        <span id="age-error"><!--Age is Required--></span>
+      </div>
+      <div class="input-group">
+      <div class="gen">
+        <label for="gender" id="gen">Gender:</label>
+        <input type="radio" name="gender" value="male" id="male" checked="checked">Male
+        <input type="radio" name="gender" value="female" id="female" >Female
+        
+      </div>
+      <span id="gen-error"><!--Gender is Required--></span>
+      </div>
+      <div class="input-group">
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="123 456 7890" id="pno" onkeyup="validtephone()">
+        <span id="pno-error"><!--Phone Number is Required--></span>
+      </div>
+      
+      
+      
+
+      <!-- <h3>Add Passenger</h3>
+      <input type="radio" name="addpassenger" value="YES" onclick="text()" /> -->
+
+      <a class="button123" href="#" onclick="window.text()">Add Passenger</a>
+
+
+      
+      
+      <div class="input-group">
+        <div id ="addpass" style="display: none;">
+        <label>First Name:</label>
+        <input type="text" placeholder="Enter your First name" id="fname1" onkeyup="validtefName1()">
+         <span id="fname1-error"><!--First Name is Required --></span>
+      </div>
+    </div>
+
+      <div class="input-group">
+        <div id ="addpass1" style="display: none;">
+        <label>Last Name:</label>
+        <input type="text" placeholder="Enter your Last name" id="lname1" onkeyup="validtelName1()">
+         <span id="lname1-error">  <!--Last Name is Required-->  </span> 
+      </div>
+    </div>
+
+
+      <div class="input-group">
+        <div id ="addpass2" style="display: none;">
+        <label>Age:</label>    
+        <input type="text" id="age1" name="age" placeholder="Age" onkeyup="return validteage1()">
+        <span id="age1-error"><!--Age is Required--></span>
+      </div>
+    </div>
+      
+    
+    <div class="input-group">
+      <div id="addpass3" style="display: none;">
+      <div class="gen1">
+        <label for="gender1" id="gen1">Gender:</label>
+        <input type="radio" name="gender1" value="male" id="male1" >Male
+        <input type="radio" name="gender1" value="female" id="female1" checked="checked" >Female
+      </div>
+      </div>
+
+
+
+
+      <!-- Add Passenger -->
+    
+    <!-- <div class="input-group">
+      <div class="addpass">
+        <label>Add Passenger</label>
+        
+      </div>
+
+      <div class="input-group" >
+      <div class="fname1" >
+        <label>First Name:</label>
+        <input type="text" placeholder="Enter your First name" id="fname1" >
+      </div>
+    </div>
+
+      <div class="input-group">
+        <div class="lname1">
+        <label>Last Name:</label>
+        <input type="text" placeholder="Enter your Last name" id="lname1" >
+      </div>
+      </div>
+
+      <div class="input-group">
+        <div class ="age1" >
+        <label>Age:</label>    
+        <input type="text" id="age1" name="age1" placeholder="Age" >
+      </div>
+      </div>
+      <div class="input-group">
+      <div class="gen1" >        
+        <label for="gender" id="gen1">Gender:</label>
+        <input type="radio" name="gender" value="male" id="male1">Male
+        <input type="radio" name="gender" value="female" id="female1">Female
+        
+      </div> -->
+      <!-- </div> -->
+        
+
+      
+      
+    
+    
+    
+    
+    
+    <button  onclick="return validateform()">Submit</button> 
+    <span id="sub-error"></span>
+   
+
+
+
+
+
+      
+      
+      
+ 
+ 
+  
+  
+  </div>
+  <script src="script1.js"></script>
+  
+</body>
+</html>

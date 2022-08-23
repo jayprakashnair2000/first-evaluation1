@@ -28,7 +28,7 @@ function display_cards(flight_det){
                 <p class="arrival-time">${arrival.toUTCString()}</p>
                 <h4>Price</h4>
                 <p class="price">&#8377;${flight_det[count]['price']}</p>
-                <button type="button" class="btn btn-primary" id="flight${flight_det[count]['id']}" onclick="location.href='booking.html'">Proceed</button>
+                <button type="button" class="btn btn-primary" id="flight${flight_det[count]['id']}" onclick="location.href='book.html'; get_flight_details(${flight_det[count]['id']});">Proceed</button>
             </div>
         </div>
 
@@ -41,3 +41,10 @@ function display_cards(flight_det){
 fetch('flights.json')
 .then(response => response.json())
 .then(data => display_cards(data));
+
+
+function get_flight_details(flightid){
+    window.localStorage.clear();
+    localStorage.setItem("flightid",flightid);
+}
+
