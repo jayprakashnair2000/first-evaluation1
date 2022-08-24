@@ -41,7 +41,7 @@ h2{
     opacity: 0.8;
     /* margin: 1% 30% 20% 30%; */
 
-    margin: 30px 200px 300px 200px;
+    margin: 30px 200px 30px 200px;
    
     padding: 4%;
     /* border-radius: 30px; */
@@ -63,11 +63,26 @@ h2{
   
 }
 .airlines h1{
-    color: rgb(212, 39, 9);
+    color: rgb(1, 41, 41);
     font-family: "Montserrat";
 }
 
 .qr{
     margin-left: 85px;
     /* padding: 50% 50% 50% 50%; */
+}
+
+.button123 { 
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    cursor: pointer;
+    margin-left: 47%;
+    margin-bottom: 30%;
 }

@@ -15,84 +15,101 @@ var age1Error = document.getElementById('age1-error')
 var gen1Error = document.getElementById('gen1-error')
 
 function validtefName(){
+    var f=document.getElementById('fname');
     var fname = document.getElementById('fname').value;
     if(fname.length == 0){
         fnameError.innerHTML = 'First Name is Required';
+        invalid(f);
         return false;
     }
 
     if(!fname.match(/^[a-zA-Z]{0,20}$/)){
         fnameError.innerHTML = 'Write First Name Correctly';
+        invalid(f);
         return false;
     }
     
     fnameError.innerHTML = '<i class="uil uil-check-circle"></i>';
     localStorage.setItem("firname",fname); 
+    valid(f);
     return true;
+
     
 }
 
 function validtelName(){
     var lname = document.getElementById('lname').value;
-
+    var l = document.getElementById('lname');
     if(lname.length == 0){
         lnameError.innerHTML = 'Last Name is Required';
+        invalid(l);
         return false;
+
     }
 
     if(!lname.match(/^[a-zA-Z]{0,20}$/)){
         lnameError.innerHTML = 'Write Last Name Correctly';
+        invalid(l);
         return false;
     }
     
     lnameError.innerHTML = '<i class="uil uil-check-circle"></i>';
     localStorage.setItem("lasname",lname);
+    valid(l);
     return true;
     
 }
 
 function validteemail(){
     var email = document.getElementById('email').value;
+    var e = document.getElementById('email');
 
     if(email.length == 0){
         emailError.innerHTML = 'Email is Required';
+        invalid(e);
         return false;
     }
 
     if(!email.match(/\S+@\S+\.\S+/)){
         emailError.innerHTML = 'Write Email Correctly';
+        invalid(e);
         return false;
     }
     
     emailError.innerHTML = '<i class="uil uil-check-circle"></i>';
     localStorage.setItem("emailaddr",email); 
+    valid(e);
     return true;
     
 }
 
 function validteage(){
     var age = document.getElementById('age').value;
-
+    var a = document.getElementById('age');
     if(age.length == 0){
         ageError.innerHTML = 'Age is Required';
+        invalid(a);
         return false;
     }
 
     if(17 >= age)
     {
         ageError.innerHTML = 'Age Should be more than 18';
+        invalid(a);
         return false;
     }
 
     if(age.match(/^100|[1-9]?\d$/)){
         ageError.innerHTML = '<i class="uil uil-check-circle"></i>';
         localStorage.setItem("agepa",age); 
+        valid(a);
         return true;
     }
 
     
     
     ageError.innerHTML = 'Write age in Numbers';
+    invalid(a);
     return false;
     
 }
@@ -124,25 +141,29 @@ function validteage(){
 // }
 function validtephone(){
     var phone = document.getElementById('pno').value;
-
+    var a = document.getElementById('pno');
     if(phone.length == 0){
         phoneError.innerHTML = 'Phone Number is required';
+        invalid(a);
         return false;
 
     }
     if(phone.length != 10){
         phoneError.innerHTML = 'Phone Number be 10 digits';
+        invalid(a);
         return false;
 
     }
     if(!phone.match(/^[0-9]{10}$/)){
         phoneError.innerHTML = 'Only Digits Please';
+        invalid(a);
         return false;
 
     }
     
     phoneError.innerHTML= '<i class="uil uil-check-circle"></i>'
     localStorage.setItem("phoneno",phone); 
+    valid(a);
     return true
 
 }
@@ -363,3 +384,16 @@ function text(){
     
 }
 
+function invalid(element){
+
+    element.style.borderColor = "red";
+    element.style.borderWidth = "thin thick";
+
+}
+
+function valid(element){
+
+    element.style.borderColor = "black";
+    element.style.borderWidth = "thin thin";
+
+}

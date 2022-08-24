@@ -47,6 +47,7 @@ function display_value(data) {
             </div>
             <div class="qr"> 
             <img src="img/qrcode.png" width="200" height="200">
+            
             </div>
             
         </div>
@@ -54,6 +55,7 @@ function display_value(data) {
         
 
     </div>
+    <a class="button123" href="#" onclick="window.location.href='index.html'">Go To Home </a>
 
 
 `
@@ -96,13 +98,17 @@ function display_value1(data) {
             <h3> Passenger name: ${finame1} ${laname1}</h3>
             <h3>Age: ${agep1}</h3>
             <h3>Gender: ${gen1}</h3>
+            
             </div>
             <div class="qr"> 
             <img src="img/qrcode.png" width="200" height="200">
+            
             </div>
-        
+            
+           
 
         </div>
+        <a class="button123" href="#" onclick="window.location.href='index.html'">Go To Home </a>
 
 
 `
