@@ -1,3 +1,7 @@
+// created by Jayprakash Nair 
+
+
+
 var fnameError = document.getElementById('fname-error')
 var lnameError = document.getElementById('lname-error')
 var emailError = document.getElementById('email-error')
@@ -6,7 +10,7 @@ var genError = document.getElementById('gen-error')
 var phoneError = document.getElementById('pno-error')
 var subError = document.getElementById('sub-error')
 
-// Add Passenger
+// Add Passenger errors
 
 
 var fname1Error = document.getElementById('fname1-error')
@@ -14,7 +18,7 @@ var lname1Error = document.getElementById('lname1-error')
 var age1Error = document.getElementById('age1-error')
 var gen1Error = document.getElementById('gen1-error')
 
-function validtefName(){
+function validtefName(){   //Validating First name 
     var f=document.getElementById('fname');
     var fname = document.getElementById('fname').value;
     if(fname.length == 0){
@@ -23,8 +27,8 @@ function validtefName(){
         return false;
     }
 
-    if(!fname.match(/^[a-zA-Z]{0,20}$/)){
-        fnameError.innerHTML = 'Write First Name Correctly';
+    if(!fname.match(/^[a-zA-Z]{0,20}$/)){                           
+        fnameError.innerHTML = 'Write First Name Correctly';                
         invalid(f);
         return false;
     }
@@ -37,7 +41,7 @@ function validtefName(){
     
 }
 
-function validtelName(){
+function validtelName(){ //Validating Last name 
     var lname = document.getElementById('lname').value;
     var l = document.getElementById('lname');
     if(lname.length == 0){
@@ -60,7 +64,7 @@ function validtelName(){
     
 }
 
-function validteemail(){
+function validteemail(){ //Validating email  
     var email = document.getElementById('email').value;
     var e = document.getElementById('email');
 
@@ -83,7 +87,7 @@ function validteemail(){
     
 }
 
-function validteage(){
+function validteage(){   //Validating Age  
     var age = document.getElementById('age').value;
     var a = document.getElementById('age');
     if(age.length == 0){
@@ -139,7 +143,7 @@ function validteage(){
    
 
 // }
-function validtephone(){
+function validtephone(){ //Validating Phone Number 
     var phone = document.getElementById('pno').value;
     var a = document.getElementById('pno');
     if(phone.length == 0){
@@ -280,7 +284,7 @@ function validtephone(){
 
 
 
-
+// Validating second passenger 
 
 
 function validtefName1(){
@@ -343,7 +347,7 @@ function validteage1(){
 
 
 
-function validateform(){
+function validateform(){ // Checking if all fields are true and enabling submit button
     if(!validtefName() || !validtelName() || !validteemail() || !validteage() || !validtephone() ){
         subError.style.display = 'block';
         subError.innerHTML = 'Please fix error to submit';
@@ -357,7 +361,7 @@ function validateform(){
         for (var radio of radios)
         {
             if (radio.checked) {
-                localStorage.setItem("gend",radio.value); 
+                localStorage.setItem("gend",radio.value); // Adding to Local storage
             }
         }
         
@@ -366,8 +370,8 @@ function validateform(){
         for (var radio1 of radios1)
         {
             if (radio1.checked) {
-                localStorage.setItem("gend1",radio1.value); 
-            }
+                localStorage.setItem("gend1",radio1.value); // Adding to Local storage
+            } 
         }
         }
     
@@ -384,14 +388,14 @@ function text(){
     
 }
 
-function invalid(element){
+function invalid(element){ // If invalid red input line appears
 
     element.style.borderColor = "red";
     element.style.borderWidth = "thin thick";
 
 }
 
-function valid(element){
+function valid(element){ // If valid black input line appears
 
     element.style.borderColor = "black";
     element.style.borderWidth = "thin thin";

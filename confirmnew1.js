@@ -1,9 +1,12 @@
+//created by Jayprakash Nair
+
+
 let flight_id = localStorage.getItem("flightid");
 let finame = localStorage.getItem("firname");
 let laname = localStorage.getItem("lasname");
 let emailadd = localStorage.getItem("emailaddr");
 let agep = localStorage.getItem("agepa");
-let phoneno = localStorage.getItem("phoneno");
+let phoneno = localStorage.getItem("phoneno");        // Take items from Local Storage
 let gen = localStorage.getItem("gend");
 let finame1 = localStorage.getItem("firname1");
 let laname1 = localStorage.getItem("lasname1");
@@ -21,7 +24,7 @@ let content = '';
 function display_value(data) {
     var departure = new Date(data[flight_id].departTime);
     var arrival = new Date(data[flight_id].ArrivalTime);
-
+//adding information to confirmation page when only one passenger is present
     content += `
     <div class="details" >
         
@@ -34,7 +37,7 @@ function display_value(data) {
             
             <h3>Departure: <span>${departure.toUTCString()} </span></h3>
             
-            <h3>Arrival: <span>${arrival.toUTCString()} </span></h3>
+            <h3>Arrival: <span>${arrival.toUTCString()} </span></h3>                    
             
             <h3>Price: <span> &#8377;${data[flight_id].price}</h3>
             </div>  
@@ -56,6 +59,8 @@ function display_value(data) {
 
     </div>
     <a class="button123" href="#" onclick="window.location.href='index.html'">Go To Home </a>
+    <a href="https://restpack.io/html2pdf/save-as-pdf" target="_blank">Download Pdf</a>
+
 
 
 `
@@ -67,6 +72,7 @@ function display_value(data) {
 function display_value1(data) {
     var departure = new Date(data[flight_id].departTime);
     var arrival = new Date(data[flight_id].ArrivalTime);
+//adding information to confirmation page when two passenger is present
 
     content += `
     <div class="details" >
@@ -109,6 +115,8 @@ function display_value1(data) {
 
         </div>
         <a class="button123" href="#" onclick="window.location.href='index.html'">Go To Home </a>
+        
+
 
 
 `
@@ -121,7 +129,7 @@ function display_value1(data) {
 
 
 if (flag == 1) {
-    fetch('flights.json')
+    fetch('flights.json')                       // flag denotes if the add passenger is clicked
         .then(response => response.json())
         .then(data => display_value1(data))
 }
