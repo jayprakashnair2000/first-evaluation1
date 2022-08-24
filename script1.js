@@ -16,7 +16,6 @@ var gen1Error = document.getElementById('gen1-error')
 
 function validtefName(){
     var fname = document.getElementById('fname').value;
-
     if(fname.length == 0){
         fnameError.innerHTML = 'First Name is Required';
         return false;
@@ -79,11 +78,19 @@ function validteage(){
         return false;
     }
 
+    if(17 >= age)
+    {
+        ageError.innerHTML = 'Age Should be more than 18';
+        return false;
+    }
+
     if(age.match(/^100|[1-9]?\d$/)){
         ageError.innerHTML = '<i class="uil uil-check-circle"></i>';
         localStorage.setItem("agepa",age); 
         return true;
     }
+
+    
     
     ageError.innerHTML = 'Write age in Numbers';
     return false;
@@ -324,6 +331,7 @@ function validateform(){
     }
     else{
         
+
         var radios = document.getElementsByName('gender');
         for (var radio of radios)
         {
@@ -347,7 +355,7 @@ function validateform(){
 }
 
 function text(){
-    // localStorage.setItem("flag",1);
+    localStorage.setItem("flag",1);
     document.getElementById("addpass").style.display = "block";
     document.getElementById("addpass1").style.display = "block";
     document.getElementById("addpass2").style.display = "block";
