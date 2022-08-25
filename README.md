@@ -10,7 +10,7 @@ Here I have made a site containing:
 
 
 
-2)Login page: Contains validation of all attributes with add passenger. ( book.html, style1.css and script.js)
+2)Login page: Contains validation of all attributes with add passenger. ( book.html, style1.css and script1.js)
 
 
 
